@@ -188,10 +188,10 @@
 
         Productivity+Controls {
             bindings = <
-        &kp LG(N)  &kp LG(T)  &kp LG(X)         &kp LG(A)    &to 0                   &trans  &trans  &trans  &trans  &trans
-&trans  &kp LG(Q)  &kp LG(W)  &kp LG(C)         &kp LG(V)    &none                   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LG(P)  &kp LG(S)  &kp LG(KP_COMMA)  &kp LG(DOT)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                              &trans            &trans       &trans  &trans  &trans  &trans  &trans  &trans
+        &kp LG(N)  &kp LG(T)  &kp LG(X)         &kp LG(A)    &to 0                      &trans  &trans  &trans  &trans  &trans
+&trans  &kp LG(Q)  &kp LG(W)  &kp LG(C)         &kp LG(V)    &kp LG(R)                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LG(P)  &kp LG(S)  &kp LG(KP_COMMA)  &kp LG(DOT)  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                              &trans            &trans       &trans     &trans  &trans  &trans  &trans  &trans
             >;
         };
 
