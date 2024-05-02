@@ -38,7 +38,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DOUBLETAP_FOR_DICTATION";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp C_VOICE_COMMAND>;
+            bindings = <&kp SQT>, <&kp C_VOICE_COMMAND>;
         };
     };
 
@@ -53,12 +53,7 @@
 
         Exclamation {
             bindings = <&kp EXCL>;
-            key-positions = <38 30>;
-        };
-
-        Delete {
-            bindings = <&kp DEL>;
-            key-positions = <38 41>;
+            key-positions = <30 37>;
         };
     };
 
