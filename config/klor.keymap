@@ -46,6 +46,28 @@
             #binding-cells = <0>;
             bindings = <&kp KP_DOT>, <&kp SEMI>;
         };
+
+        qt_open_parentesis: qt_open_parentesis {
+            compatible = "zmk,behavior-tap-dance";
+            label = "QT_OPEN_PARENTESIS";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LEFT_PARENTHESIS>,
+                <&kp LEFT_BRACE>,
+                <&kp LEFT_BRACKET>,
+                <&kp LESS_THAN>;
+        };
+
+        qt_close_parentesis: qt_close_parentesis {
+            compatible = "zmk,behavior-tap-dance";
+            label = "QT_CLOSE_PARENTESIS";
+            #binding-cells = <0>;
+            bindings =
+                <&kp RIGHT_PARENTHESIS>,
+                <&kp RIGHT_BRACE>,
+                <&kp RIGHT_BRACKET>,
+                <&kp GREATER_THAN>;
+        };
     };
 
     combos {
@@ -133,10 +155,10 @@
 
         Nav_Mouse+Num {
             bindings = <
-        &kp LEFT  &kp DOWN   &kp UP    &kp RIGHT  &to 0                   &mkp LCLK  &mmv MOVE_LEFT  &mwh SCROLL_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
-&trans  &trans    &kp LCTRL  &kp LALT  &kp LGUI   &trans                  &mkp RCLK  &kp RGUI        &kp RALT          &kp LCTRL     &mkp MCLK        &trans
-&trans  &kp N1    &kp N2     &kp N3    &kp N4     &kp N5  &trans  &trans  &kp N6     &kp N7          &kp N8            &kp N9        &kp N0           &trans
-                             &trans    &trans     &trans  &trans  &trans  &trans     &trans          &trans
+        &kp LEFT             &kp DOWN   &kp UP    &kp RIGHT  &to 0                                 &mkp LCLK  &mmv MOVE_LEFT  &mwh SCROLL_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
+&trans  &qt_open_parentesis  &kp LCTRL  &kp LALT  &kp LGUI   &qt_close_parentesis                  &mkp RCLK  &kp RGUI        &kp RALT          &kp LCTRL     &mkp MCLK        &trans
+&trans  &kp N1               &kp N2     &kp N3    &kp N4     &kp N5                &trans  &trans  &kp N6     &kp N7          &kp N8            &kp N9        &kp N0           &trans
+                                        &trans    &trans     &trans                &trans  &trans  &trans     &trans          &trans
             >;
         };
     };
