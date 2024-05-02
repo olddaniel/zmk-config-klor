@@ -37,7 +37,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TT_SLASH";
             #binding-cells = <0>;
-            bindings = <&kp SQT>, <&kp KP_SLASH>, <&kp BACKSLASH>;
+            bindings = <&kp SQT>, <&kp KP_SLASH>, <&kp BACKSLASH>, <&kp PIPE>;
         };
 
         dt_semicolon: dt_semicolon {
