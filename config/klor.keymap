@@ -133,7 +133,7 @@
        &kp B  &kp Y               &kp O           &kp U                 &qt_open_parentesis                            &qt_close_parentesis  &kp L                  &kp D            &kp W                &kp V
 &none  &kp C  &hm LEFT_CONTROL I  &hm LEFT_ALT E  &hm LEFT_COMMAND A    &kp KP_COMMA                                   &dt_semicolon         &hm RIGHT_COMMAND H    &hm RIGHT_ALT T  &hm RIGHT_CONTROL S  &kp N  &none
 &none  &kp G  &kp X               &dt_J           &dt_Q                 &tt_slash            &trans  &kp C_PLAY_PAUSE  &kp QUESTION          &kp R                  &kp M            &kp F                &kp P  &none
-                                  &kp TAB         &mt LEFT_SHIFT SPACE  &kp BACKSPACE        &trans  &trans            &kp DEL               &mt RIGHT_SHIFT ENTER  &trans
+                                  &lt 2 TAB       &mt LEFT_SHIFT SPACE  &kp BACKSPACE        &trans  &trans            &kp DEL               &mt RIGHT_SHIFT ENTER  &trans
             >;
         };
 
@@ -146,7 +146,7 @@
             >;
         };
 
-        layer_3 {
+        Productivity+Acentuation {
             bindings = <
         &kp LG(N)  &kp LG(T)  &kp LG(X)         &kp LG(A)    &to 0                   &trans  &trans  &trans  &trans  &trans
 &trans  &kp LG(Q)  &kp LG(W)  &kp LG(C)         &kp LG(V)    &none                   &trans  &trans  &trans  &trans  &trans  &trans
