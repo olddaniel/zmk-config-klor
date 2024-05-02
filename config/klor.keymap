@@ -43,14 +43,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DT_CAPS";
             #binding-cells = <0>;
-            bindings = <&kp Q>, <&kp CAPS>;
+            bindings = <&kp QMARK>, <&kp CAPS>;
         };
 
         tt_slash: tt_slash {
             compatible = "zmk,behavior-tap-dance";
             label = "TT_SLASH";
             #binding-cells = <0>;
-            bindings = <&kp KP_SLASH>, <&kp BACKSLASH>, <&kp PIPE>;
+            bindings = <&kp Q>, <&kp KP_SLASH>, <&kp BACKSLASH>;
         };
 
         dt_semicolon: dt_semicolon {
@@ -102,9 +102,9 @@
 
         Engram {
             bindings = <
-       &kp B  &kp Y               &kp O           &kp U                 &kp ESC                        &dt_CAPS       &kp L                  &kp D            &kp W                &kp V
+       &kp B  &kp Y               &kp O           &kp U                 &kp ESC                        &tt_slash      &kp L                  &kp D            &kp W                &kp V
 &none  &kp C  &hm LEFT_CONTROL I  &hm LEFT_ALT E  &hm LEFT_COMMAND A    &kp KP_COMMA                   &dt_semicolon  &hm RIGHT_COMMAND H    &hm RIGHT_ALT T  &hm RIGHT_CONTROL S  &kp N  &none
-&none  &kp G  &kp X               &kp J           &kp K                 &dt_dictation  &trans  &trans  &kp QMARK      &kp R                  &kp M            &kp F                &kp P  &none
+&none  &kp G  &kp X               &kp J           &kp K                 &dt_dictation  &trans  &trans  &dt_CAPS       &kp R                  &kp M            &kp F                &kp P  &none
                                   &kp TAB         &mt LEFT_SHIFT SPACE  &kp BACKSPACE  &trans  &trans  &kp DEL        &mt RIGHT_SHIFT ENTER  &trans
             >;
         };
