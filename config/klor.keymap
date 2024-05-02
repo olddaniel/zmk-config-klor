@@ -33,6 +33,13 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        doubletap_for_dictation: doubletap_for_dictation {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DOUBLETAP_FOR_DICTATION";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp C_VOICE_COMMAND>;
+        };
     };
 
     combos {
@@ -62,10 +69,10 @@
 
         Engram {
             bindings = <
-       &kp B  &kp Y               &kp O           &kp U               &kp FSLH                              &kp Q          &kp L                &kp D            &kp W                &kp V
-&none  &kp C  &hm LEFT_CONTROL I  &hm LEFT_ALT E  &hm LEFT_COMMAND A  &kp COMMA                             &kp DOT        &hm RIGHT_COMMAND H  &hm RIGHT_ALT T  &hm RIGHT_CONTROL S  &kp N  &none
-&none  &kp G  &kp X               &kp J           &kp K               &kp SQT               &trans  &trans  &kp QMARK      &kp R                &kp M            &kp F                &kp P  &none
-                                  &kp ESCAPE      &kp TAB             &mt LEFT_SHIFT SPACE  &trans  &trans  &kp BACKSPACE  &lt 1 ENTER          &trans
+       &kp B  &kp Y               &kp O           &kp U                 &kp ESC                                   &kp Q                &kp L                &kp D            &kp W                &kp V
+&none  &kp C  &hm LEFT_CONTROL I  &hm LEFT_ALT E  &hm LEFT_COMMAND A    &kp KP_COMMA                              &kp DOT              &hm RIGHT_COMMAND H  &hm RIGHT_ALT T  &hm RIGHT_CONTROL S  &kp N  &none
+&none  &kp G  &kp X               &kp J           &kp K                 &doubletap_for_dictation  &trans  &trans  &kp QMARK            &kp R                &kp M            &kp F                &kp P  &none
+                                  &kp TAB         &mt LEFT_SHIFT SPACE  &kp BACKSPACE             &trans  &trans  &mt RIGHT_SHIFT DEL  &lt 1 ENTER          &trans
             >;
         };
 
