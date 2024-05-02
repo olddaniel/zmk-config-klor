@@ -121,6 +121,11 @@
             bindings = <&kp ESC>;
             key-positions = <38 41>;
         };
+
+        Esc_one_handed {
+            bindings = <&kp ESC>;
+            key-positions = <0 1>;
+        };
     };
 
     keymap {
