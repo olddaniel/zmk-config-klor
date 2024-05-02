@@ -34,26 +34,52 @@
             bindings = <&kp>, <&kp>;
         };
 
-        doubletap_for_dictation: doubletap_for_dictation {
+        dt_dictation: dt_dictation {
             compatible = "zmk,behavior-tap-dance";
-            label = "DOUBLETAP_FOR_DICTATION";
+            label = "DT_DICTATION";
             #binding-cells = <0>;
             bindings = <&kp SQT>, <&kp C_VOICE_COMMAND>;
+        };
+
+        dt_CAPS: dt_CAPS {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DT_CAPS";
+            #binding-cells = <0>;
+            bindings = <&kp Q>, <&kp CAPS>;
         };
     };
 
     combos {
         compatible = "zmk,combos";
 
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
-        };
-
-        Exclamation {
+        L_Exclamation {
             bindings = <&kp EXCL>;
             key-positions = <30 37>;
+        };
+
+        R_Exclamation {
+            bindings = <&kp EXCL>;
+            key-positions = <30 42>;
+        };
+
+        L_Equal {
+            bindings = <&kp KP_EQUAL>;
+            key-positions = <37 15>;
+        };
+
+        R_Equal {
+            bindings = <&kp KP_EQUAL>;
+            key-positions = <15 42>;
+        };
+
+        R_Colon {
+            bindings = <&kp COLON>;
+            key-positions = <42 16>;
+        };
+
+        L_Colon {
+            bindings = <&kp COLON>;
+            key-positions = <16 37>;
         };
     };
 
@@ -64,10 +90,10 @@
 
         Engram {
             bindings = <
-       &kp B  &kp Y               &kp O           &kp U                 &kp ESC                                   &kp Q                &kp L                &kp D            &kp W                &kp V
-&none  &kp C  &hm LEFT_CONTROL I  &hm LEFT_ALT E  &hm LEFT_COMMAND A    &kp KP_COMMA                              &kp DOT              &hm RIGHT_COMMAND H  &hm RIGHT_ALT T  &hm RIGHT_CONTROL S  &kp N  &none
-&none  &kp G  &kp X               &kp J           &kp K                 &doubletap_for_dictation  &trans  &trans  &kp QMARK            &kp R                &kp M            &kp F                &kp P  &none
-                                  &kp TAB         &mt LEFT_SHIFT SPACE  &kp BACKSPACE             &trans  &trans  &mt RIGHT_SHIFT DEL  &lt 1 ENTER          &trans
+       &kp B  &kp Y               &kp O           &kp U                 &kp ESC                        &dt_CAPS   &kp L                  &kp D            &kp W                &kp V
+&none  &kp C  &hm LEFT_CONTROL I  &hm LEFT_ALT E  &hm LEFT_COMMAND A    &kp KP_COMMA                   &kp DOT    &hm RIGHT_COMMAND H    &hm RIGHT_ALT T  &hm RIGHT_CONTROL S  &kp N  &none
+&none  &kp G  &kp X               &kp J           &kp K                 &dt_dictation  &trans  &trans  &kp QMARK  &kp R                  &kp M            &kp F                &kp P  &none
+                                  &kp TAB         &mt LEFT_SHIFT SPACE  &kp BACKSPACE  &trans  &trans  &kp DEL    &mt RIGHT_SHIFT ENTER  &trans
             >;
         };
 
