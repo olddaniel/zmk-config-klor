@@ -110,6 +110,13 @@
             #sensor-binding-cells = <0>;
             bindings = <&mwh SCROLL_RIGHT>, <&mwh SCROLL_DOWN>;
         };
+
+        dt_layer1: dt_layer1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DT_LAYER1";
+            #binding-cells = <0>;
+            bindings = <&kp U>, <&to 1>;
+        };
     };
 
     combos {
@@ -165,7 +172,7 @@
 
         Engram {
             bindings = <
-       &kp B  &kp Y               &kp O           &lt 1 U               &qt_open_parentesis                            &qt_close_parentesis  &kp L                  &kp D            &kp W                &kp V
+       &kp B  &kp Y               &kp O           &dt_layer1            &qt_open_parentesis                            &qt_close_parentesis  &kp L                  &kp D            &kp W                &kp V
 &none  &kp C  &hm LEFT_CONTROL I  &hm LEFT_ALT E  &hm LEFT_COMMAND A    &dt_J                                          &dt_semicolon         &hm RIGHT_COMMAND H    &hm RIGHT_ALT T  &hm RIGHT_CONTROL S  &kp N  &none
 &none  &kp G  &kp X               &kp Z           &dt_Q                 &tt_slash            &trans  &kp C_PLAY_PAUSE  &kp QUESTION          &kp R                  &kp M            &kp F                &kp P  &none
                                   &lt 2 TAB       &mt LEFT_SHIFT SPACE  &kp BACKSPACE        &trans  &trans            &kp DEL               &mt RIGHT_SHIFT ENTER  &kp ESC
