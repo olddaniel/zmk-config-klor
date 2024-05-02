@@ -43,6 +43,16 @@
             key-positions = <0 1>;
             bindings = <&kp ESC>;
         };
+
+        Exclamation {
+            bindings = <&kp EXCL>;
+            key-positions = <38 30>;
+        };
+
+        Delete {
+            bindings = <&kp DEL>;
+            key-positions = <38 41>;
+        };
     };
 
     keymap {
@@ -52,10 +62,10 @@
 
         Engram {
             bindings = <
-       &kp B  &kp Y  &kp O       &kp U    &kp FSLH                              &kp Q          &kp L      &kp D   &kp W  &kp V
-&none  &kp C  &kp I  &kp E       &kp A    &kp COMMA                             &kp DOT        &kp H      &kp T   &kp S  &kp N  &none
-&none  &kp G  &kp X  &kp J       &kp K    &kp SQT               &trans  &trans  &kp QMARK      &kp R      &kp M   &kp F  &kp P  &none
-                     &kp ESCAPE  &kp TAB  &mt LEFT_SHIFT SPACE  &trans  &trans  &kp BACKSPACE  &kp ENTER  &trans
+       &kp B  &kp Y               &kp O           &kp U               &kp FSLH                              &kp Q          &kp L                &kp D            &kp W                &kp V
+&none  &kp C  &hm LEFT_CONTROL I  &hm LEFT_ALT E  &hm LEFT_COMMAND A  &kp COMMA                             &kp DOT        &hm RIGHT_COMMAND H  &hm RIGHT_ALT T  &hm RIGHT_CONTROL S  &kp N  &none
+&none  &kp G  &kp X               &kp J           &kp K               &kp SQT               &trans  &trans  &kp QMARK      &kp R                &kp M            &kp F                &kp P  &none
+                                  &kp ESCAPE      &kp TAB             &mt LEFT_SHIFT SPACE  &trans  &trans  &kp BACKSPACE  &lt 1 ENTER          &trans
             >;
         };
 
@@ -101,6 +111,15 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        One_shot_layer {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
         };
     };
 };
