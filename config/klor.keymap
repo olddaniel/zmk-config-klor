@@ -33,11 +33,11 @@
             bindings = <&kp>, <&kp>;
         };
 
-        tt_slash: tt_slash {
+        dt_apost_slash: dt_apost_slash {
             compatible = "zmk,behavior-tap-dance";
-            label = "TT_SLASH";
+            label = "DT_APOST_SLASH";
             #binding-cells = <0>;
-            bindings = <&kp SQT>, <&kp KP_SLASH>, <&kp BACKSLASH>, <&kp PIPE>;
+            bindings = <&kp SQT>, <&kp KP_SLASH>;
         };
 
         dt_semicolon: dt_semicolon {
@@ -45,42 +45,6 @@
             label = "DT_SEMICOLON";
             #binding-cells = <0>;
             bindings = <&kp KP_DOT>, <&kp SEMI>;
-        };
-
-        qt_open_parentesis: qt_open_parentesis {
-            compatible = "zmk,behavior-tap-dance";
-            label = "QT_OPEN_PARENTESIS";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LEFT_PARENTHESIS>,
-                <&kp LEFT_BRACE>,
-                <&kp LEFT_BRACKET>,
-                <&kp LESS_THAN>;
-        };
-
-        qt_close_parentesis: qt_close_parentesis {
-            compatible = "zmk,behavior-tap-dance";
-            label = "QT_CLOSE_PARENTESIS";
-            #binding-cells = <0>;
-            bindings =
-                <&kp RIGHT_PARENTHESIS>,
-                <&kp RIGHT_BRACE>,
-                <&kp RIGHT_BRACKET>,
-                <&kp GREATER_THAN>;
-        };
-
-        dt_Q: dt_Q {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DT_Q";
-            #binding-cells = <0>;
-            bindings = <&kp K>, <&kp Q>;
-        };
-
-        dt_J: dt_J {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DT_J";
-            #binding-cells = <0>;
-            bindings = <&kp KP_COMMA>, <&kp J>;
         };
 
         encoder_volume: encoder_volume {
@@ -116,6 +80,13 @@
             label = "DT_LAYER1";
             #binding-cells = <0>;
             bindings = <&kp U>, <&to 1>;
+        };
+
+        dp_K_backslash_pipe: dp_K_backslash_pipe {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DP_K_BACKSLASH_PIPE";
+            #binding-cells = <0>;
+            bindings = <&kp K>, <&kp BACKSLASH>;
         };
     };
 
@@ -172,19 +143,19 @@
 
         Engram {
             bindings = <
-       &kp B  &kp Y               &kp O           &dt_layer1            &qt_open_parentesis                            &qt_close_parentesis  &kp L                  &kp D            &kp W                &kp V
-&none  &kp C  &hm LEFT_CONTROL I  &hm LEFT_ALT E  &hm LEFT_COMMAND A    &dt_J                                          &dt_semicolon         &hm RIGHT_COMMAND H    &hm RIGHT_ALT T  &hm RIGHT_CONTROL S  &kp N  &none
-&none  &kp G  &kp X               &kp Z           &dt_Q                 &tt_slash            &trans  &kp C_PLAY_PAUSE  &kp QUESTION          &kp R                  &kp M            &kp F                &kp P  &none
-                                  &lt 2 TAB       &mt LEFT_SHIFT SPACE  &kp BACKSPACE        &trans  &trans            &kp DEL               &mt RIGHT_SHIFT ENTER  &kp ESC
+       &kp B  &kp Y               &kp O           &dt_layer1            &dp_K_backslash_pipe                            &kp J          &kp L                  &kp D            &kp W                &kp Q
+&none  &kp C  &hm LEFT_CONTROL I  &hm LEFT_ALT E  &hm LEFT_COMMAND A    &kp KP_COMMA                                    &dt_semicolon  &hm RIGHT_COMMAND H    &hm RIGHT_ALT T  &hm RIGHT_CONTROL S  &kp N  &none
+&none  &kp G  &kp X               &kp Z           &kp V                 &dt_apost_slash       &trans  &kp C_PLAY_PAUSE  &kp QUESTION   &kp R                  &kp M            &kp F                &kp P  &none
+                                  &lt 2 TAB       &mt LEFT_SHIFT SPACE  &kp BACKSPACE         &trans  &trans            &kp DEL        &mt RIGHT_SHIFT ENTER  &kp ESC
             >;
         };
 
         Nav+Mouse+Num+Symb {
             bindings = <
-        &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &to 0                     &mkp LCLK  &mmv MOVE_LEFT  &mwh SCROLL_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
-&trans  &kp MINUS  &kp LCTRL  &kp LALT  &kp LGUI   &kp PLUS                  &mkp RCLK  &kp RGUI        &kp RALT          &kp LCTRL     &mkp MCLK        &trans
-&trans  &kp N0     &kp N1     &kp N2    &kp N3     &kp N4    &trans  &trans  &kp N5     &kp N6          &kp N7            &kp N8        &kp N9           &trans
-                              &trans    &trans     &trans    &trans  &trans  &trans     &trans          &trans
+        &kp LEFT   &kp DOWN                    &kp UP                     &kp RIGHT                          &to 0                     &mkp LCLK  &mmv MOVE_LEFT                       &mwh SCROLL_DOWN             &mmv MOVE_UP                    &mmv MOVE_RIGHT
+&trans  &kp MINUS  &mt LEFT_CONTROL LESS_THAN  &mt LEFT_ALT LEFT_BRACKET  &mt LEFT_COMMAND LEFT_PARENTHESIS  &kp PLUS                  &mkp RCLK  &mt RIGHT_COMMAND RIGHT_PARENTHESIS  &mt RIGHT_ALT RIGHT_BRACKET  &mt RIGHT_CONTROL GREATER_THAN  &mkp MCLK        &trans
+&trans  &kp N0     &kp N1                      &kp N2                     &kp N3                             &kp N4    &trans  &trans  &kp N5     &kp N6                               &kp N7                       &kp N8                          &kp N9           &trans
+                                               &trans                     &trans                             &trans    &trans  &trans  &trans     &trans                               &trans
             >;
         };
 
