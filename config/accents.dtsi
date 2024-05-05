@@ -1,0 +1,59 @@
+/*
+*
+* Copyright (c) 2022 Rafael Romão
+* SPDX-License-Identifier: MIT
+*
+*/
+
+/ {
+
+    #define C_CEDIL (LA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_C)))
+
+    #define ACCENTED_KEY(NAME, KEY, DEAD_KEY) \
+        NAME##_l: NAME##_l { \
+            wait-ms = <0>; \
+            tap-ms = <0>; \
+            compatible = "zmk,behavior-macro"; \
+            #binding-cells = <0>; \
+            bindings \
+                = <&macro_press &kp LALT> \
+                , <&macro_tap &kp DEAD_KEY> \
+                , <&macro_release &kp LALT> \
+                , <&macro_tap &kp KEY> \
+                ; \
+        }; \
+        NAME##_c: NAME##_c { \
+            wait-ms = <10>; \
+            tap-ms = <10>; \
+            compatible = "zmk,behavior-macro"; \
+            #binding-cells = <0>; \
+            bindings \
+                = <&macro_press &kp LALT> \
+                , <&macro_tap &kp DEAD_KEY> \
+                , <&macro_release &kp LALT> \
+                , <&macro_press &kp LSHFT> \
+                , <&macro_tap &kp KEY> \
+                , <&macro_release &kp LSHFT> \
+                ; \
+        }; \
+        NAME: NAME { \
+            compatible = "zmk,behavior-mod-morph"; \
+            #binding-cells = <0>; \
+            bindings = <&NAME##_l>, <&NAME##_c>; \
+            mods = <(MOD_LSFT|MOD_RSFT)>; \
+        };
+
+    accents {
+        ACCENTED_KEY(agrv, A, GRAVE)
+        ACCENTED_KEY(aacu, A, E    )
+        ACCENTED_KEY(atil, A, N    )
+        ACCENTED_KEY(acir, A, I    )
+        ACCENTED_KEY(eacu, E, E    )
+        ACCENTED_KEY(ecir, E, I    )
+        ACCENTED_KEY(iacu, I, E    )
+        ACCENTED_KEY(oacu, O, E    )
+        ACCENTED_KEY(otil, O, N    )
+        ACCENTED_KEY(ocir, O, I    )
+        ACCENTED_KEY(uacu, U, E    )
+    };
+};
