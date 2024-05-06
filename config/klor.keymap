@@ -38,27 +38,6 @@
             #binding-cells = <0>;
             bindings = <&kp SQT>, <&kp KP_SLASH>;
         };
-
-        dt_dot_semicolon: dt_dot_semicolon {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DT_DOT_SEMICOLON";
-            #binding-cells = <0>;
-            bindings = <&kp KP_DOT>, <&kp SEMI>;
-        };
-
-        dt_K_layer1: dt_K_layer1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DT_K_LAYER1";
-            #binding-cells = <0>;
-            bindings = <&kp K>, <&to 1>;
-        };
-
-        dp_J_backslash_pipe: dp_J_backslash_pipe {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DP_J_BACKSLASH_PIPE";
-            #binding-cells = <0>;
-            bindings = <&kp J>, <&kp BACKSLASH>;
-        };
     };
 
     combos {
@@ -106,14 +85,24 @@
             layers = <0>;
         };
 
-        to_layer_1 {
-            bindings = <&to 1>;
+        to_layer_0 {
+            bindings = <&to 0>;
             key-positions = <38 4>;
         };
 
-        to_layer_2 {
-            bindings = <&sl 2>;
+        to_layer_1 {
+            bindings = <&to 1>;
             key-positions = <38 15>;
+        };
+
+        to_layer_2 {
+            bindings = <&to 2>;
+            key-positions = <38 27>;
+        };
+
+        semicolon {
+            bindings = <&kp SEMICOLON>;
+            key-positions = <15 16>;
         };
     };
 
@@ -124,16 +113,16 @@
 
         Engram {
             bindings = <
-       &kp B  &kp Y               &kp O           &kp U                 &kp V                            &dp_J_backslash_pipe  &kp L                  &kp D            &kp W                &kp Q
-&none  &kp C  &hm LEFT_CONTROL I  &hm LEFT_ALT E  &hm LEFT_COMMAND A    &kp KP_COMMA                     &dt_dot_semicolon     &hm RIGHT_COMMAND H    &hm RIGHT_ALT T  &hm RIGHT_CONTROL S  &kp N  &none
-&none  &kp G  &kp X               &kp Z           &kp K                 &dt_apost_slash  &trans  &none   &kp QUESTION          &kp R                  &kp M            &kp F                &kp P  &none
-                                  &kp TAB         &mt LEFT_SHIFT SPACE  &kp BACKSPACE    &trans  &trans  &kp DEL               &mt RIGHT_SHIFT ENTER  &kp ESC
+       &kp B  &kp Y               &kp O           &kp U                 &kp V                            &kp J         &kp L                  &kp D            &kp W                &kp Q
+&none  &kp C  &hm LEFT_CONTROL I  &hm LEFT_ALT E  &hm LEFT_COMMAND A    &kp KP_COMMA                     &kp KP_DOT    &hm RIGHT_COMMAND H    &hm RIGHT_ALT T  &hm RIGHT_CONTROL S  &kp N  &none
+&none  &kp G  &kp X               &kp Z           &kp K                 &dt_apost_slash  &trans  &none   &kp QUESTION  &kp R                  &kp M            &kp F                &kp P  &none
+                                  &lt 2 TAB       &mt LEFT_SHIFT SPACE  &kp BACKSPACE    &trans  &trans  &kp DEL       &mt RIGHT_SHIFT ENTER  &kp ESC
             >;
         };
 
         Nav+Mouse+Num+Symb {
             bindings = <
-        &kp LEFT         &kp DOWN                      &kp UP                    &kp RIGHT                     &to 0                            &kp AT           &kp POUND                      &kp DOLLAR                 &kp PERCENT                    &kp AMPS
+        &kp LEFT         &kp DOWN                      &kp UP                    &kp RIGHT                     &kp BACKSLASH                    &kp AT           &kp POUND                      &kp DOLLAR                 &kp PERCENT                    &kp AMPS
 &trans  &kp KP_NUMBER_0  &mt LEFT_CONTROL KP_NUMBER_1  &mt LEFT_ALT KP_NUMBER_2  &mt LEFT_COMMAND KP_NUMBER_3  &kp KP_NUMBER_4                  &kp KP_NUMBER_5  &mt RIGHT_COMMAND KP_NUMBER_6  &mt RIGHT_ALT KP_NUMBER_7  &mt RIGHT_CONTROL KP_NUMBER_8  &kp KP_NUMBER_9   &trans
 &trans  &kp LESS_THAN    &kp LEFT_BRACKET              &kp LEFT_PARENTHESIS      &kp PLUS                      &kp MINUS        &trans  &trans  &kp KP_MULTIPLY  &kp KP_DIVIDE                  &kp RIGHT_PARENTHESIS      &kp RIGHT_BRACKET              &kp GREATER_THAN  &trans
                                                        &trans                    &trans                        &trans           &trans  &trans  &trans           &trans                         &trans
