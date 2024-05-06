@@ -153,7 +153,7 @@
         Nav+Mouse+Num+Symb {
             bindings = <
         &kp LEFT   &kp DOWN                    &kp UP                     &kp RIGHT                          &to 0                     &none   &none                                &none                        &none                           &none
-&trans  &kp MINUS  &mt LEFT_CONTROL LESS_THAN  &mt LEFT_ALT LEFT_BRACKET  &mt LEFT_COMMAND LEFT_PARENTHESIS  &kp PLUS                  &none   &mt RIGHT_COMMAND RIGHT_PARENTHESIS  &mt RIGHT_ALT RIGHT_BRACKET  &mt RIGHT_CONTROL GREATER_THAN  &none   &trans
+&trans  &kp MINUS  &mt LEFT_CONTROL LESS_THAN  &mt LEFT_ALT LEFT_BRACKET  &mt LEFT_COMMAND LEFT_PARENTHESIS  &kp PLUS                  &trans  &mt RIGHT_COMMAND RIGHT_PARENTHESIS  &mt RIGHT_ALT RIGHT_BRACKET  &mt RIGHT_CONTROL GREATER_THAN  &none   &trans
 &trans  &kp N0     &kp N1                      &kp N2                     &kp N3                             &kp N4    &trans  &trans  &kp N5  &kp N6                               &kp N7                       &kp N8                          &kp N9  &trans
                                                &trans                     &trans                             &trans    &trans  &trans  &trans  &trans                               &trans
             >;
