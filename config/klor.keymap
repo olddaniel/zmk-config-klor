@@ -48,22 +48,37 @@
             #binding-cells = <0>;
             mods = <(MOD_LALT|MOD_RALT)>;
         };
+
+        question_exclamation: question_exclamation {
+            compatible = "zmk,behavior-mod-morph";
+            label = "QUESTION_EXCLAMATION";
+            bindings = <&kp QUESTION>, <&kp EXCLAMATION>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        dot_colon: dot_colon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_COLON";
+            bindings = <&kp PT_DOT>, <&kp PT_COLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        comma_equal: comma_equal {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_EQUAL";
+            bindings = <&kp PT_COMMA>, <&kp PT_EQUAL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     combos {
         compatible = "zmk,combos";
-
-        L_Exclamation {
-            bindings = <&kp EXCL>;
-            key-positions = <30 37>;
-            layers = <0>;
-        };
-
-        R_Exclamation {
-            bindings = <&kp EXCL>;
-            key-positions = <30 42>;
-            layers = <0>;
-        };
 
         L_Equal {
             bindings = <&kp KP_EQUAL>;
@@ -74,18 +89,6 @@
         R_Equal {
             bindings = <&kp KP_EQUAL>;
             key-positions = <15 42>;
-            layers = <0>;
-        };
-
-        R_Colon {
-            bindings = <&kp COLON>;
-            key-positions = <42 16>;
-            layers = <0>;
-        };
-
-        L_Colon {
-            bindings = <&kp COLON>;
-            key-positions = <16 37>;
             layers = <0>;
         };
 
@@ -114,6 +117,16 @@
             bindings = <&kp SEMICOLON>;
             key-positions = <15 16>;
         };
+
+        sticky_layer_1 {
+            bindings = <&to 1>;
+            key-positions = <38 15 42>;
+        };
+
+        sticky_layer_2 {
+            bindings = <&to 2>;
+            key-positions = <38 27 42>;
+        };
     };
 
     keymap {
@@ -123,10 +136,10 @@
 
         Engram {
             bindings = <
-       &kp B     &kp Y               &kp O           &kp U                 &kp V                            &kp J         &kp L                  &kp D            &kp W                &kp Q
-&none  &cedilha  &hm LEFT_CONTROL I  &hm LEFT_ALT E  &hm LEFT_COMMAND A    &kp KP_COMMA                     &kp KP_DOT    &hm RIGHT_COMMAND H    &hm RIGHT_ALT T  &hm RIGHT_CONTROL S  &kp N  &none
-&none  &kp G     &kp X               &kp Z           &kp K                 &dt_apost_slash  &trans  &none   &kp QUESTION  &kp R                  &kp M            &kp F                &kp P  &none
-                                     &lt 2 TAB       &mt LEFT_SHIFT SPACE  &kp BACKSPACE    &trans  &trans  &kp DEL       &mt RIGHT_SHIFT ENTER  &kp ESC
+       &kp B     &kp Y               &kp O                 &kp U                 &kp V                            &kp J                  &kp L                  &kp D            &kp W                &kp Q
+&none  &cedilha  &hm LEFT_CONTROL I  &hm LEFT_ALT E        &hm LEFT_COMMAND A    &comma_equal                     &dot_colon             &hm RIGHT_COMMAND H    &hm RIGHT_ALT T  &hm RIGHT_CONTROL S  &kp N  &none
+&none  &kp G     &kp X               &kp Z                 &kp K                 &dt_apost_slash  &trans  &none   &question_exclamation  &kp R                  &kp M            &kp F                &kp P  &none
+                                     &mt LEFT_COMMAND TAB  &mt LEFT_SHIFT SPACE  &kp BACKSPACE    &trans  &trans  &kp DEL                &mt RIGHT_SHIFT ENTER  &kp ESC
             >;
         };
 
