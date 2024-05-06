@@ -80,18 +80,6 @@
     combos {
         compatible = "zmk,combos";
 
-        L_Equal {
-            bindings = <&kp KP_EQUAL>;
-            key-positions = <37 15>;
-            layers = <0>;
-        };
-
-        R_Equal {
-            bindings = <&kp KP_EQUAL>;
-            key-positions = <15 42>;
-            layers = <0>;
-        };
-
         Esc_one_handed {
             bindings = <&kp ESC>;
             key-positions = <0 1>;
