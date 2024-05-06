@@ -125,27 +125,27 @@
         Engram {
             bindings = <
        &kp B     &kp Y               &kp O                 &kp U                 &kp V                            &kp J                  &kp L                  &kp D            &kp W                &kp Q
-&none  &cedilha  &hm LEFT_CONTROL I  &hm LEFT_ALT E        &hm LEFT_COMMAND A    &comma_equal                     &dot_colon             &hm RIGHT_COMMAND H    &hm RIGHT_ALT T  &hm RIGHT_CONTROL S  &kp N  &none
-&none  &kp G     &kp X               &kp Z                 &kp K                 &dt_apost_slash  &trans  &none   &question_exclamation  &kp R                  &kp M            &kp F                &kp P  &none
-                                     &mt LEFT_COMMAND TAB  &mt LEFT_SHIFT SPACE  &kp BACKSPACE    &trans  &trans  &kp DEL                &mt RIGHT_SHIFT ENTER  &kp ESC
+       &cedilha  &hm LEFT_CONTROL I  &hm LEFT_ALT E        &hm LEFT_COMMAND A    &comma_equal                     &dot_colon             &hm RIGHT_COMMAND H    &hm RIGHT_ALT T  &hm RIGHT_CONTROL S  &kp N
+       &kp G     &kp X               &kp Z                 &kp K                 &dt_apost_slash  &trans  &none   &question_exclamation  &kp R                  &kp M            &kp F                &kp P
+                                     &mt LEFT_COMMAND TAB  &mt LEFT_SHIFT SPACE  &kp BACKSPACE                    &kp DEL                &mt RIGHT_SHIFT ENTER  &kp ESC
             >;
         };
 
         Nav+Mouse+Num+Symb {
             bindings = <
         &kp LEFT         &kp DOWN                      &kp UP                    &kp RIGHT                     &kp BACKSLASH                    &kp AT           &kp POUND                      &kp DOLLAR                 &kp PERCENT                    &kp AMPS
-&trans  &kp KP_NUMBER_0  &mt LEFT_CONTROL KP_NUMBER_1  &mt LEFT_ALT KP_NUMBER_2  &mt LEFT_COMMAND KP_NUMBER_3  &kp KP_NUMBER_4                  &kp KP_NUMBER_5  &mt RIGHT_COMMAND KP_NUMBER_6  &mt RIGHT_ALT KP_NUMBER_7  &mt RIGHT_CONTROL KP_NUMBER_8  &kp KP_NUMBER_9   &trans
-&trans  &kp LESS_THAN    &kp LEFT_BRACKET              &kp LEFT_PARENTHESIS      &kp PLUS                      &kp MINUS        &trans  &trans  &kp KP_MULTIPLY  &kp KP_DIVIDE                  &kp RIGHT_PARENTHESIS      &kp RIGHT_BRACKET              &kp GREATER_THAN  &trans
-                                                       &trans                    &trans                        &trans           &trans  &trans  &trans           &trans                         &trans
+        &kp KP_NUMBER_0  &mt LEFT_CONTROL KP_NUMBER_1  &mt LEFT_ALT KP_NUMBER_2  &mt LEFT_COMMAND KP_NUMBER_3  &kp KP_NUMBER_4                  &kp KP_NUMBER_5  &mt RIGHT_COMMAND KP_NUMBER_6  &mt RIGHT_ALT KP_NUMBER_7  &mt RIGHT_CONTROL KP_NUMBER_8  &kp KP_NUMBER_9 
+        &kp LESS_THAN    &kp LEFT_BRACKET              &kp LEFT_PARENTHESIS      &kp PLUS                      &kp MINUS        &trans  &trans  &kp KP_MULTIPLY  &kp KP_DIVIDE                  &kp RIGHT_PARENTHESIS      &kp RIGHT_BRACKET              &kp GREATER_THAN
+                                                       &trans                    &trans                        &trans                           &trans           &trans                         &trans
             >;
         };
 
         Productivity+Controls {
             bindings = <
         &kp LG(N)      &kp LG(T)  &kp LG(X)  &kp LG(A)    &to 0                      &kp PAGE_UP    &trans        &trans            &trans        &kp C_POWER
-&trans  &kp LG(Q)      &kp LG(W)  &kp LG(C)  &kp LG(V)    &kp LG(R)                  &kp PAGE_DOWN  &kp PT_ACUTE  &kp PT_TILDE      &kp PT_CARET  &kp PT_GRAVE  &trans
-&trans  &kp LG(LS(L))  &kp LG(S)  &kp LG(Z)  &kp LG(DOT)  &kp LG(F)  &trans  &trans  &trans         &none         &kp LG(KP_COMMA)  &kp LG(P)     &kp CLCK      &trans
-                                  &trans     &trans       &trans     &trans  &trans  &trans         &trans        &trans
+        &kp LG(Q)      &kp LG(W)  &kp LG(C)  &kp LG(V)    &kp LG(R)                  &kp PAGE_DOWN  &kp PT_ACUTE  &kp PT_TILDE      &kp PT_CARET  &kp PT_GRAVE 
+        &kp LG(LS(L))  &kp LG(S)  &kp LG(Z)  &kp LG(DOT)  &kp LG(F)  &trans  &trans  &trans         &none         &kp LG(KP_COMMA)  &kp LG(P)     &kp CLCK      
+                                  &trans     &trans       &trans                     &trans         &trans        &trans
             >;
         };
     };
