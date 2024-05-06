@@ -39,6 +39,15 @@
             #binding-cells = <0>;
             bindings = <&kp SQT>, <&kp KP_SLASH>;
         };
+
+        cedilha: cedilha {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CEDILHA";
+            bindings = <&kp PT_C>, <&kp PT_C_CEDILLA>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
     };
 
     combos {
@@ -114,10 +123,10 @@
 
         Engram {
             bindings = <
-       &kp B  &kp Y               &kp O           &kp U                 &kp V                            &kp J         &kp L                  &kp D            &kp W                &kp Q
-&none  &kp C  &hm LEFT_CONTROL I  &hm LEFT_ALT E  &hm LEFT_COMMAND A    &kp KP_COMMA                     &kp KP_DOT    &hm RIGHT_COMMAND H    &hm RIGHT_ALT T  &hm RIGHT_CONTROL S  &kp N  &none
-&none  &kp G  &kp X               &kp Z           &kp K                 &dt_apost_slash  &trans  &none   &kp QUESTION  &kp R                  &kp M            &kp F                &kp P  &none
-                                  &lt 2 TAB       &mt LEFT_SHIFT SPACE  &kp BACKSPACE    &trans  &trans  &kp DEL       &mt RIGHT_SHIFT ENTER  &kp ESC
+       &kp B     &kp Y               &kp O           &kp U                 &kp V                            &kp J         &kp L                  &kp D            &kp W                &kp Q
+&none  &cedilha  &hm LEFT_CONTROL I  &hm LEFT_ALT E  &hm LEFT_COMMAND A    &kp KP_COMMA                     &kp KP_DOT    &hm RIGHT_COMMAND H    &hm RIGHT_ALT T  &hm RIGHT_CONTROL S  &kp N  &none
+&none  &kp G     &kp X               &kp Z           &kp K                 &dt_apost_slash  &trans  &none   &kp QUESTION  &kp R                  &kp M            &kp F                &kp P  &none
+                                     &lt 2 TAB       &mt LEFT_SHIFT SPACE  &kp BACKSPACE    &trans  &trans  &kp DEL       &mt RIGHT_SHIFT ENTER  &kp ESC
             >;
         };
 
