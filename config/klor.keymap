@@ -47,34 +47,6 @@
             bindings = <&kp KP_DOT>, <&kp SEMI>;
         };
 
-        encoder_volume: encoder_volume {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "ENCODER_VOLUME";
-            #sensor-binding-cells = <0>;
-            bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
-        };
-
-        encoder_brightness: encoder_brightness {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "ENCODER_BRIGHTNESS";
-            #sensor-binding-cells = <0>;
-            bindings = <&kp C_BRIGHTNESS_INC>, <&kp C_BRIGHTNESS_DEC>;
-        };
-
-        encoder_scroll_up_down: encoder_scroll_up_down {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "ENCODER_SCROLL_UP_DOWN";
-            #sensor-binding-cells = <0>;
-            bindings = <&mwh SCROLL_DOWN>, <&mwh SCROLL_UP>;
-        };
-
-        encoder_scroll_left_right: encoder_scroll_left_right {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "ENCODER_SCROLL_LEFT_RIGHT";
-            #sensor-binding-cells = <0>;
-            bindings = <&mwh SCROLL_RIGHT>, <&mwh SCROLL_DOWN>;
-        };
-
         dt_K_layer1: dt_K_layer1 {
             compatible = "zmk,behavior-tap-dance";
             label = "DT_K_LAYER1";
