@@ -112,7 +112,7 @@
         };
 
         to_layer_2 {
-            bindings = <&mo 2>;
+            bindings = <&sl 2>;
             key-positions = <38 15>;
         };
     };
@@ -133,10 +133,10 @@
 
         Nav+Mouse+Num+Symb {
             bindings = <
-        &kp LEFT   &kp DOWN                    &kp UP                     &kp RIGHT                          &to 0                     &none   &none                                &none                        &none                           &none
-&trans  &kp MINUS  &mt LEFT_CONTROL LESS_THAN  &mt LEFT_ALT LEFT_BRACKET  &mt LEFT_COMMAND LEFT_PARENTHESIS  &kp PLUS                  &trans  &mt RIGHT_COMMAND RIGHT_PARENTHESIS  &mt RIGHT_ALT RIGHT_BRACKET  &mt RIGHT_CONTROL GREATER_THAN  &none   &trans
-&trans  &kp N0     &kp N1                      &kp N2                     &kp N3                             &kp N4    &trans  &trans  &kp N5  &kp N6                               &kp N7                       &kp N8                          &kp N9  &trans
-                                               &trans                     &trans                             &trans    &trans  &trans  &trans  &trans                               &trans
+        &kp LEFT         &kp DOWN                      &kp UP                    &kp RIGHT                     &to 0                            &kp AT           &kp POUND                      &kp DOLLAR                 &kp PERCENT                    &kp AMPS
+&trans  &kp KP_NUMBER_0  &mt LEFT_CONTROL KP_NUMBER_1  &mt LEFT_ALT KP_NUMBER_2  &mt LEFT_COMMAND KP_NUMBER_3  &kp KP_NUMBER_4                  &kp KP_NUMBER_5  &mt RIGHT_COMMAND KP_NUMBER_6  &mt RIGHT_ALT KP_NUMBER_7  &mt RIGHT_CONTROL KP_NUMBER_8  &kp KP_NUMBER_9   &trans
+&trans  &kp LESS_THAN    &kp LEFT_BRACKET              &kp LEFT_PARENTHESIS      &kp PLUS                      &kp MINUS        &trans  &trans  &kp KP_MULTIPLY  &kp KP_DIVIDE                  &kp RIGHT_PARENTHESIS      &kp RIGHT_BRACKET              &kp GREATER_THAN  &trans
+                                                       &trans                    &trans                        &trans           &trans  &trans  &trans           &trans                         &trans
             >;
         };
 
