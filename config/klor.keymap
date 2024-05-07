@@ -88,32 +88,32 @@
 
         to_layer_0 {
             bindings = <&to 0>;
-            key-positions = <38 4>;
+            key-positions = <38 4 32>;
         };
 
         to_layer_1 {
             bindings = <&to 1>;
-            key-positions = <38 15>;
+            key-positions = <38 14 32>;
         };
 
         to_layer_2 {
             bindings = <&to 2>;
-            key-positions = <38 27>;
+            key-positions = <38 32 24>;
         };
 
         semicolon {
             bindings = <&kp SEMICOLON>;
-            key-positions = <15 16>;
+            key-positions = <15 14>;
         };
 
         sticky_layer_1 {
             bindings = <&to 1>;
-            key-positions = <15 36>;
+            key-positions = <30 14>;
         };
 
         sticky_layer_2 {
             bindings = <&to 2>;
-            key-positions = <27 36>;
+            key-positions = <30 24>;
         };
     };
 
