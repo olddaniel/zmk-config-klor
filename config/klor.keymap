@@ -148,6 +148,7 @@
         to_layer_0 {
             bindings = <&to 0>;
             key-positions = <38 4 30>;
+            layers = <3>;
         };
 
         to_layer_1 {
@@ -178,6 +179,12 @@
         at_sign {
             bindings = <&kp AT_SIGN>;
             key-positions = <13 2>;
+            layers = <0>;
+        };
+
+        to_layer_3 {
+            bindings = <&to 3>;
+            key-positions = <38 4 30>;
             layers = <0>;
         };
     };
@@ -211,6 +218,15 @@
 &kp LG(Q)      &kp LG(W)  &kp LG(C)  &kp LG(V)    &kp LG(R)                  &rgb_ug RGB_EFF  &kp PT_ACUTE     &kp PT_TILDE  &kp PT_CARET  &kp PT_GRAVE
 &kp LG(LS(L))  &kp LG(S)  &kp LG(Z)  &kp LG(DOT)  &kp LG(F)                  &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &bt BT_CLR    &kp PG_DN     &kp CAPS
                           &trans     &trans       &trans     &trans  &trans  &trans           &trans           &trans
+            >;
+        };
+
+        Qwerty {
+            bindings = <
+&kp Q  &kp W  &kp E     &kp R   &kp T                   &kp Y   &kp U   &kp I         &kp O       &kp P
+&kp A  &kp S  &kp D     &kp F   &kp G                   &kp H   &kp J   &kp K         &kp L       &dt_apost_slash
+&kp Z  &kp X  &cedilha  &kp V   &kp B                   &kp N   &kp M   &comma_equal  &dot_colon  &question_exclamation
+              &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
