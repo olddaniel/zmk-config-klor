@@ -75,6 +75,62 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        o_masculine_ordinal: o_masculine_ordinal {
+            compatible = "zmk,behavior-mod-morph";
+            label = "O_MASCULINE_ORDINAL";
+            bindings = <&kp O>, <&kp PT_MASCULINE_ORDINAL_INDICATOR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        control_8_ampersand: control_8_ampersand {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CONTROL_8_AMPERSAND";
+            bindings = <&mt RIGHT_CONTROL KP_NUMBER_8>, <&kp AMPERSAND>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        control_S_dollar: control_S_dollar {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CONTROL_S_DOLLAR";
+            bindings = <&mt RIGHT_CONTROL S>, <&kp DOLLAR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        command_H_hash: command_H_hash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMAND_H_HASH";
+            bindings = <&mt RIGHT_COMMAND A>, <&kp HASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        command_A_feminine_ordinal: command_A_feminine_ordinal {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMAND_A_FEMININE_ORDINAL";
+            bindings =
+                <&mt LEFT_COMMAND A>,
+                <&kp PT_FEMININE_ORDINAL_INDICATOR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        control_1_pipe: control_1_pipe {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CONTROL_1_PIPE";
+            bindings = <&mt LEFT_CONTROL KP_NUMBER_1>, <&kp PIPE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
     };
 
     combos {
@@ -88,17 +144,17 @@
 
         to_layer_0 {
             bindings = <&to 0>;
-            key-positions = <38 4 32>;
+            key-positions = <38 4 30>;
         };
 
         to_layer_1 {
             bindings = <&to 1>;
-            key-positions = <38 14 32>;
+            key-positions = <38 14 30>;
         };
 
         to_layer_2 {
             bindings = <&to 2>;
-            key-positions = <38 32 24>;
+            key-positions = <38 24 30>;
         };
 
         semicolon {
@@ -108,12 +164,18 @@
 
         sticky_layer_1 {
             bindings = <&to 1>;
-            key-positions = <30 14>;
+            key-positions = <14 32>;
         };
 
         sticky_layer_2 {
             bindings = <&to 2>;
-            key-positions = <30 24>;
+            key-positions = <24 32>;
+        };
+
+        at_sign {
+            bindings = <&kp AT_SIGN>;
+            key-positions = <13 2>;
+            layers = <0>;
         };
     };
 
@@ -124,19 +186,19 @@
 
         Engram {
             bindings = <
-&kp B     &kp Y               &kp O                 &kp U                 &kp V                          &kp J                  &kp L                  &kp D            &kp W                &kp Q
-&cedilha  &hm LEFT_CONTROL I  &hm LEFT_ALT E        &hm LEFT_COMMAND A    &comma_equal                   &dot_colon             &hm RIGHT_COMMAND H    &hm RIGHT_ALT T  &hm RIGHT_CONTROL S  &kp N
-&kp G     &kp X               &kp Z                 &kp K                 &dt_apost_slash                &question_exclamation  &kp R                  &kp M            &kp F                &kp P
-                              &mt LEFT_COMMAND TAB  &mt LEFT_SHIFT SPACE  &kp BACKSPACE    &none  &none  &kp DEL                &mt RIGHT_SHIFT ENTER  &kp ESC
+&kp B     &kp Y               &o_masculine_ordinal  &kp U                        &kp V                          &kp J                  &kp L                  &kp D            &kp W              &kp Q
+&cedilha  &hm LEFT_CONTROL I  &hm LEFT_ALT E        &command_A_feminine_ordinal  &comma_equal                   &dot_colon             &command_H_hash        &hm RIGHT_ALT T  &control_S_dollar  &kp N
+&kp G     &kp X               &kp Z                 &kp K                        &dt_apost_slash                &question_exclamation  &kp R                  &kp M            &kp F              &kp P
+                              &mt LEFT_COMMAND TAB  &mt LEFT_SHIFT SPACE         &kp BACKSPACE    &none  &none  &kp DEL                &mt RIGHT_SHIFT ENTER  &kp ESC
             >;
         };
 
-        Nav+Mouse+Num+Symb {
+        Nav+Num+Symb {
             bindings = <
-&kp LEFT         &kp DOWN                      &kp UP                    &kp RIGHT                     &kp BACKSLASH                    &kp AT           &kp POUND                      &kp DOLLAR                 &kp PERCENT                    &kp AMPS
-&kp KP_NUMBER_0  &mt LEFT_CONTROL KP_NUMBER_1  &mt LEFT_ALT KP_NUMBER_2  &mt LEFT_COMMAND KP_NUMBER_3  &kp KP_NUMBER_4                  &kp KP_NUMBER_5  &mt RIGHT_COMMAND KP_NUMBER_6  &mt RIGHT_ALT KP_NUMBER_7  &mt RIGHT_CONTROL KP_NUMBER_8  &kp KP_NUMBER_9
-&kp LESS_THAN    &kp LEFT_BRACKET              &kp LEFT_PARENTHESIS      &kp PLUS                      &kp MINUS                        &trans           &trans                         &kp KP_MULTIPLY            &kp KP_DIVIDE                  &kp RIGHT_PARENTHESIS
-                                               &kp RIGHT_BRACKET         &kp GREATER_THAN              &trans           &trans  &trans  &trans           &trans                         &trans
+&kp LEFT         &kp DOWN             &kp UP                    &kp RIGHT                     &kp KP_DIVIDE                    &kp KP_MULTIPLY  &kp KP_EQUAL                   &trans                     &kp PERCENT           &kp BACKSLASH
+&kp KP_NUMBER_0  &control_1_pipe      &mt LEFT_ALT KP_NUMBER_2  &mt LEFT_COMMAND KP_NUMBER_3  &kp KP_NUMBER_4                  &kp KP_NUMBER_5  &mt RIGHT_COMMAND KP_NUMBER_6  &mt RIGHT_ALT KP_NUMBER_7  &control_8_ampersand  &kp KP_NUMBER_9
+&kp LESS_THAN    &kp PT_LEFT_BRACKET  &kp LEFT_BRACE            &kp LEFT_PARENTHESIS          &kp MINUS                        &kp KP_PLUS      &kp RIGHT_PARENTHESIS          &kp RIGHT_BRACE            &kp PT_RIGHT_BRACKET  &kp GREATER_THAN
+                                      &trans                    &trans                        &trans           &trans  &trans  &trans           &trans                         &trans
             >;
         };
 
