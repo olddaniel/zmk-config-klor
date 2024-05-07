@@ -14,7 +14,10 @@
 
 #include "keys_pt_abnt2.h"
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/rgb.h>
 
 #define BASE   0
 #define LOWER  1
@@ -195,19 +198,19 @@
 
         Nav+Num+Symb {
             bindings = <
-&kp LEFT         &kp DOWN             &kp UP                    &kp RIGHT                     &kp KP_DIVIDE                    &kp KP_MULTIPLY  &kp KP_EQUAL                   &trans                     &kp PERCENT           &kp BACKSLASH
+&kp LEFT         &kp DOWN             &kp UP                    &kp RIGHT                     &to 0                            &kp MINUS        &kp KP_PLUS                    &kp KP_EQUAL               &kp PERCENT           &kp BACKSLASH
 &kp KP_NUMBER_0  &control_1_pipe      &mt LEFT_ALT KP_NUMBER_2  &mt LEFT_COMMAND KP_NUMBER_3  &kp KP_NUMBER_4                  &kp KP_NUMBER_5  &mt RIGHT_COMMAND KP_NUMBER_6  &mt RIGHT_ALT KP_NUMBER_7  &control_8_ampersand  &kp KP_NUMBER_9
-&kp LESS_THAN    &kp PT_LEFT_BRACKET  &kp LEFT_BRACE            &kp LEFT_PARENTHESIS          &kp MINUS                        &kp KP_PLUS      &kp RIGHT_PARENTHESIS          &kp RIGHT_BRACE            &kp PT_RIGHT_BRACKET  &kp GREATER_THAN
+&kp LESS_THAN    &kp PT_LEFT_BRACKET  &kp LEFT_BRACE            &kp LEFT_PARENTHESIS          &kp KP_DIVIDE                    &kp KP_MULTIPLY  &kp RIGHT_PARENTHESIS          &kp RIGHT_BRACE            &kp PT_RIGHT_BRACKET  &kp GREATER_THAN
                                       &trans                    &trans                        &trans           &trans  &trans  &trans           &trans                         &trans
             >;
         };
 
         Productivity+Controls {
             bindings = <
-&kp LG(N)      &kp LG(T)  &kp LG(X)  &kp LG(A)    &to 0                      &kp PAGE_UP    &trans        &trans        &trans        &kp C_POWER
-&kp LG(Q)      &kp LG(W)  &kp LG(C)  &kp LG(V)    &kp LG(R)                  &kp PAGE_DOWN  &kp PT_ACUTE  &kp PT_TILDE  &kp PT_CARET  &kp PT_GRAVE
-&kp LG(LS(L))  &kp LG(S)  &kp LG(Z)  &kp LG(DOT)  &kp LG(F)                  &trans         &trans        &trans        &none         &kp LG(KP_COMMA)
-                          &kp LG(P)  &kp CLCK     &trans     &trans  &trans  &trans         &trans        &trans
+&kp LG(N)      &kp LG(T)  &kp LG(X)  &kp LG(A)    &to 0                      &out OUT_TOG     &rgb_ug RGB_BRI  &bt BT_NXT    &kp PG_UP     &kp C_POWER
+&kp LG(Q)      &kp LG(W)  &kp LG(C)  &kp LG(V)    &kp LG(R)                  &rgb_ug RGB_EFF  &kp PT_ACUTE     &kp PT_TILDE  &kp PT_CARET  &kp PT_GRAVE
+&kp LG(LS(L))  &kp LG(S)  &kp LG(Z)  &kp LG(DOT)  &kp LG(F)                  &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &bt BT_CLR    &kp PG_DN     &kp CAPS
+                          &trans     &trans       &trans     &trans  &trans  &trans           &trans           &trans
             >;
         };
     };
