@@ -167,12 +167,12 @@
         };
 
         sticky_layer_1 {
-            bindings = <&to 1>;
+            bindings = <&sl 1>;
             key-positions = <14 32>;
         };
 
         sticky_layer_2 {
-            bindings = <&to 2>;
+            bindings = <&sl 2>;
             key-positions = <24 32>;
         };
 
@@ -185,7 +185,6 @@
         to_layer_3 {
             bindings = <&to 3>;
             key-positions = <38 4 30>;
-            layers = <0>;
         };
     };
 
