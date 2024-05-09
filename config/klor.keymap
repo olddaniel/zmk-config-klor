@@ -145,6 +145,35 @@
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
+
+        hold_sticky: hold_sticky {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_STICKY";
+            bindings = <&kp>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+        };
+
+        super_shift: super_shift {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SUPER_SHIFT";
+            bindings = <&hold_sticky LEFT_SHIFT LEFT_SHIFT>, <&caps_word>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        shift_cedilha: shift_cedilha {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SHIFT_CEDILHA";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&cedilha>;
+        };
     };
 
     combos {
@@ -206,10 +235,10 @@
 
         Engram {
             bindings = <
-&kp B     &kp Y               &o_masculine_ordinal  &kp U                        &kp V                            &kp J                  &kp L            &kp D            &kp W              &kp Q
-&cedilha  &hm LEFT_CONTROL I  &hm LEFT_ALT E        &command_A_feminine_ordinal  &comma_equal                     &dot_colon             &command_H_hash  &hm RIGHT_ALT T  &control_S_dollar  &hm RIGHT_SHIFT N
-&kp G     &kp X               &kp Z                 &kp K                        &apost_slash                     &question_exclamation  &kp R            &kp M            &kp F              &kp P
-                              &mt LEFT_COMMAND TAB  &hm LEFT_SHIFT SPACE         &backspace_delete  &none  &none  &kp ENTER              &kp RIGHT_SHIFT  &kp ESC
+&kp B               &kp Y               &o_masculine_ordinal  &kp U                        &kp V                            &kp J                  &kp L            &kp D            &kp W              &kp Q
+&shift_cedilha C 0  &hm LEFT_CONTROL I  &hm LEFT_ALT E        &command_A_feminine_ordinal  &comma_equal                     &dot_colon             &command_H_hash  &hm RIGHT_ALT T  &control_S_dollar  &hm RIGHT_SHIFT N
+&kp G               &kp X               &kp Z                 &kp K                        &apost_slash                     &question_exclamation  &kp R            &kp M            &kp F              &kp P
+                                        &mt LEFT_COMMAND TAB  &hm LEFT_SHIFT SPACE         &backspace_delete  &none  &none  &kp ENTER              &super_shift     &kp ESC
             >;
         };
 
