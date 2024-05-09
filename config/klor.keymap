@@ -196,11 +196,6 @@
             key-positions = <38 14 30>;
         };
 
-        to_layer_2 {
-            bindings = <&to 2>;
-            key-positions = <38 24 30>;
-        };
-
         semicolon {
             bindings = <&kp SEMICOLON>;
             key-positions = <15 14>;
@@ -209,11 +204,6 @@
         sticky_layer_1 {
             bindings = <&sl 1>;
             key-positions = <14 32>;
-        };
-
-        sticky_layer_2 {
-            bindings = <&sl 2>;
-            key-positions = <24 32>;
         };
 
         at_sign {
@@ -225,6 +215,7 @@
         to_layer_3 {
             bindings = <&to 3>;
             key-positions = <38 4 30>;
+            layers = <1 0 2>;
         };
     };
 
@@ -235,10 +226,10 @@
 
         Engram {
             bindings = <
-&kp B               &kp Y               &o_masculine_ordinal  &kp U                        &kp V                            &kp J                  &kp L            &kp D            &kp W              &kp Q
+&kp B               &kp Y               &o_masculine_ordinal  &kp U                        &kp G                            &kp Q                  &kp L            &kp D            &kp W              &kp J
 &shift_cedilha C 0  &hm LEFT_CONTROL I  &hm LEFT_ALT E        &command_A_feminine_ordinal  &comma_equal                     &dot_colon             &command_H_hash  &hm RIGHT_ALT T  &control_S_dollar  &hm RIGHT_SHIFT N
-&kp G               &kp X               &kp Z                 &kp K                        &apost_slash                     &question_exclamation  &kp R            &kp M            &kp F              &kp P
-                                        &mt LEFT_COMMAND TAB  &hm LEFT_SHIFT SPACE         &backspace_delete  &none  &none  &kp ENTER              &super_shift     &kp ESC
+&lt 2 V             &kp X               &kp Z                 &kp K                        &apost_slash                     &question_exclamation  &kp R            &kp M            &kp F              &kp P
+                                        &mt LEFT_SHIFT TAB    &kp SPACE                    &backspace_delete  &none  &none  &kp ENTER              &super_shift     &kp ESC
             >;
         };
 
@@ -251,12 +242,12 @@
             >;
         };
 
-        Productivity+Controls {
+        momentary_productivity_layer {
             bindings = <
-&kp LG(N)      &kp LG(T)  &kp LG(X)  &kp LG(A)    &to 0                      &out OUT_TOG     &rgb_ug RGB_BRI  &bt BT_NXT    &kp PG_UP     &kp C_POWER
-&kp LG(Q)      &kp LG(W)  &kp LG(C)  &kp LG(V)    &kp LG(R)                  &rgb_ug RGB_EFF  &kp PT_ACUTE     &kp PT_TILDE  &kp PT_CARET  &kp PT_GRAVE
-&kp LG(LS(L))  &kp LG(S)  &kp LG(Z)  &kp LG(DOT)  &kp LG(F)                  &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &bt BT_CLR    &kp PG_DN     &kp CAPS
-                          &trans     &trans       &trans     &trans  &trans  &trans           &trans           &trans
+&none   &kp LG(Q)      &kp LG(W)  &kp LG(T)  &kp LG(N)                    &out OUT_TOG     &rgb_ug RGB_BRI  &bt BT_NXT    &kp PG_UP     &kp C_POWER
+&none   &kp LG(X)      &kp LG(C)  &kp LG(V)  &kp LG(A)                    &rgb_ug RGB_EFF  &kp PT_ACUTE     &kp PT_TILDE  &kp PT_CARET  &kp PT_GRAVE
+&trans  &kp LG(LS(L))  &kp LG(F)  &kp LG(Z)  &kp LG(DOT)                  &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &bt BT_CLR    &kp PG_DN     &kp CAPS
+                       &trans     &trans     &trans       &trans  &trans  &trans           &trans           &trans
             >;
         };
 
@@ -266,6 +257,15 @@
 &kp A  &hm LEFT_CONTROL S  &hm LEFT_ALT D  &hm LEFT_COMMAND F  &kp G                   &kp H   &hm RIGHT_COMMAND J  &hm RIGHT_ALT K  &hm RIGHT_CONTROL L  &none
 &kp Z  &kp X               &cedilha        &kp V               &kp B                   &kp N   &kp M                &comma_equal     &dot_colon           &question_exclamation
                            &trans          &trans              &trans  &trans  &trans  &trans  &trans               &trans
+            >;
+        };
+
+        Productivity+Controls {
+            bindings = <
+&kp LG(N)      &kp LG(T)  &kp LG(X)  &kp LG(A)    &to 0                      &out OUT_TOG     &rgb_ug RGB_BRI  &bt BT_NXT    &kp PG_UP     &kp C_POWER
+&kp LG(Q)      &kp LG(W)  &kp LG(C)  &kp LG(V)    &kp LG(R)                  &rgb_ug RGB_EFF  &kp PT_ACUTE     &kp PT_TILDE  &kp PT_CARET  &kp PT_GRAVE
+&kp LG(LS(L))  &kp LG(S)  &kp LG(Z)  &kp LG(DOT)  &kp LG(F)                  &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &bt BT_CLR    &kp PG_DN     &kp CAPS
+                          &trans     &trans       &trans     &trans  &trans  &trans           &trans           &trans
             >;
         };
     };
