@@ -81,15 +81,6 @@
             mods = <(MOD_LALT|MOD_RALT)>;
         };
 
-        control_8_ampersand: control_8_ampersand {
-            compatible = "zmk,behavior-mod-morph";
-            label = "CONTROL_8_AMPERSAND";
-            bindings = <&mt RIGHT_CONTROL KP_NUMBER_8>, <&kp AMPERSAND>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         control_S_dollar: control_S_dollar {
             compatible = "zmk,behavior-mod-morph";
             label = "CONTROL_S_DOLLAR";
@@ -125,7 +116,7 @@
             bindings = <&mt LEFT_CONTROL KP_NUMBER_1>, <&kp PIPE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT|MOD_RALT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         apost_slash: apost_slash {
@@ -185,25 +176,20 @@
             layers = <0>;
         };
 
-        to_layer_0 {
+        to_Engram {
             bindings = <&to 0>;
-            key-positions = <38 4 30>;
-            layers = <3>;
+            key-positions = <38 31 23>;
+            layers = <2 3>;
         };
 
-        to_layer_1 {
-            bindings = <&to 1>;
-            key-positions = <38 14 30>;
+        to_Num_Sym_Nav {
+            bindings = <&to 2>;
+            key-positions = <38 21 31>;
         };
 
         semicolon {
             bindings = <&kp SEMICOLON>;
             key-positions = <15 14>;
-        };
-
-        sticky_layer_1 {
-            bindings = <&sl 1>;
-            key-positions = <14 32>;
         };
 
         at_sign {
@@ -212,10 +198,20 @@
             layers = <0>;
         };
 
-        to_layer_3 {
+        to_Qwerty {
             bindings = <&to 3>;
-            key-positions = <38 4 30>;
-            layers = <1 0 2>;
+            key-positions = <38 31 22>;
+            layers = <2 0>;
+        };
+
+        to_productivity {
+            bindings = <&to 1>;
+            key-positions = <31 20>;
+        };
+
+        enter_one_handed {
+            bindings = <&kp ENTER>;
+            key-positions = <3 2>;
         };
     };
 
@@ -226,28 +222,28 @@
 
         Engram {
             bindings = <
-&kp B               &kp Y               &o_masculine_ordinal  &kp U                        &kp G                            &kp Q                  &kp L            &kp D            &kp W              &kp J
+&hm GLOBE B         &kp Y               &o_masculine_ordinal  &kp U                        &kp G                            &kp Q                  &kp L            &kp D            &kp W              &kp J
 &shift_cedilha C 0  &hm LEFT_CONTROL I  &hm LEFT_ALT E        &command_A_feminine_ordinal  &comma_equal                     &dot_colon             &command_H_hash  &hm RIGHT_ALT T  &control_S_dollar  &hm RIGHT_SHIFT N
-&lt 2 V             &kp X               &kp Z                 &kp K                        &apost_slash                     &question_exclamation  &kp R            &kp M            &kp F              &kp P
-                                        &mt LEFT_SHIFT TAB    &kp SPACE                    &backspace_delete  &none  &none  &kp ENTER              &super_shift     &kp ESC
+&lt 1 V             &lt 2 X             &kp Z                 &kp K                        &apost_slash                     &question_exclamation  &kp R            &kp M            &kp F              &kp P
+                                        &hm LEFT_SHIFT TAB    &kp SPACE                    &backspace_delete  &none  &none  &kp ESC                &kp ENTER        &super_shift
             >;
         };
 
-        Nav+Num+Symb {
-            bindings = <
-&kp LEFT         &kp DOWN             &kp UP                    &kp RIGHT                     &to 0                            &kp MINUS        &kp KP_PLUS                    &kp KP_EQUAL               &kp PERCENT           &kp BACKSLASH
-&kp KP_NUMBER_0  &control_1_pipe      &mt LEFT_ALT KP_NUMBER_2  &mt LEFT_COMMAND KP_NUMBER_3  &kp KP_NUMBER_4                  &kp KP_NUMBER_5  &mt RIGHT_COMMAND KP_NUMBER_6  &mt RIGHT_ALT KP_NUMBER_7  &control_8_ampersand  &kp KP_NUMBER_9
-&kp LESS_THAN    &kp PT_LEFT_BRACKET  &kp LEFT_BRACE            &kp LEFT_PARENTHESIS          &kp KP_DIVIDE                    &kp KP_MULTIPLY  &kp RIGHT_PARENTHESIS          &kp RIGHT_BRACE            &kp PT_RIGHT_BRACKET  &kp GREATER_THAN
-                                      &trans                    &trans                        &trans           &trans  &trans  &trans           &trans                         &trans
-            >;
-        };
-
-        momentary_productivity_layer {
+        Productivity {
             bindings = <
 &none   &kp LG(Q)      &kp LG(W)  &kp LG(T)  &kp LG(N)                    &out OUT_TOG     &rgb_ug RGB_BRI  &bt BT_NXT    &kp PG_UP     &kp C_POWER
 &none   &kp LG(X)      &kp LG(C)  &kp LG(V)  &kp LG(A)                    &rgb_ug RGB_EFF  &kp PT_ACUTE     &kp PT_TILDE  &kp PT_CARET  &kp PT_GRAVE
 &trans  &kp LG(LS(L))  &kp LG(F)  &kp LG(Z)  &kp LG(DOT)                  &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &bt BT_CLR    &kp PG_DN     &kp CAPS
                        &trans     &trans     &trans       &trans  &trans  &trans           &trans           &trans
+            >;
+        };
+
+        Num+Symb+Nav {
+            bindings = <
+&kp LEFT         &kp DOWN             &kp UP                    &kp RIGHT                     &kp KP_MINUS                     &kp KP_PLUS      &kp KP_EQUAL                   &kp PERCENT                &kp AMPERSAND                  &kp BACKSLASH
+&kp KP_NUMBER_0  &control_1_pipe      &hm LEFT_ALT KP_NUMBER_2  &hm LEFT_COMMAND KP_NUMBER_3  &kp KP_NUMBER_4                  &kp KP_NUMBER_5  &hm RIGHT_COMMAND KP_NUMBER_6  &hm RIGHT_ALT KP_NUMBER_7  &hm RIGHT_CONTROL KP_NUMBER_8  &kp KP_NUMBER_9
+&kp LESS_THAN    &kp PT_LEFT_BRACKET  &kp LEFT_BRACE            &kp LEFT_PARENTHESIS          &kp KP_DIVIDE                    &kp KP_MULTIPLY  &kp RIGHT_PARENTHESIS          &kp RIGHT_BRACE            &kp PT_RIGHT_BRACKET           &kp GREATER_THAN
+                                      &trans                    &trans                        &trans           &trans  &trans  &trans           &trans                         &trans
             >;
         };
 
@@ -257,15 +253,6 @@
 &kp A  &hm LEFT_CONTROL S  &hm LEFT_ALT D  &hm LEFT_COMMAND F  &kp G                   &kp H   &hm RIGHT_COMMAND J  &hm RIGHT_ALT K  &hm RIGHT_CONTROL L  &none
 &kp Z  &kp X               &cedilha        &kp V               &kp B                   &kp N   &kp M                &comma_equal     &dot_colon           &question_exclamation
                            &trans          &trans              &trans  &trans  &trans  &trans  &trans               &trans
-            >;
-        };
-
-        Productivity+Controls {
-            bindings = <
-&kp LG(N)      &kp LG(T)  &kp LG(X)  &kp LG(A)    &to 0                      &out OUT_TOG     &rgb_ug RGB_BRI  &bt BT_NXT    &kp PG_UP     &kp C_POWER
-&kp LG(Q)      &kp LG(W)  &kp LG(C)  &kp LG(V)    &kp LG(R)                  &rgb_ug RGB_EFF  &kp PT_ACUTE     &kp PT_TILDE  &kp PT_CARET  &kp PT_GRAVE
-&kp LG(LS(L))  &kp LG(S)  &kp LG(Z)  &kp LG(DOT)  &kp LG(F)                  &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &bt BT_CLR    &kp PG_DN     &kp CAPS
-                          &trans     &trans       &trans     &trans  &trans  &trans           &trans           &trans
             >;
         };
     };
