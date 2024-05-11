@@ -36,9 +36,9 @@
             bindings = <&kp>, <&kp>;
         };
 
-        cedilha: cedilha {
+        cecedilha: cecedilha {
             compatible = "zmk,behavior-mod-morph";
-            label = "CEDILHA";
+            label = "CECEDILHA";
             bindings = <&hm LEFT_SHIFT C>, <&kp PT_C_CEDILLA>;
 
             #binding-cells = <0>;
@@ -99,11 +99,11 @@
             mods = <(MOD_LALT|MOD_RALT)>;
         };
 
-        command_A_feminine_ordinal: command_A_feminine_ordinal {
+        control_A_feminine_ordinal: control_A_feminine_ordinal {
             compatible = "zmk,behavior-mod-morph";
-            label = "COMMAND_A_FEMININE_ORDINAL";
+            label = "CONTROL_A_FEMININE_ORDINAL";
             bindings =
-                <&mt LEFT_COMMAND A>,
+                <&mt LEFT_CONTROL A>,
                 <&kp PT_FEMININE_ORDINAL_INDICATOR>;
 
             #binding-cells = <0>;
@@ -156,14 +156,130 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        shift_cedilha: shift_cedilha {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SHIFT_CEDILHA";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&cedilha>;
+        control_C_cecedilha: control_C_cecedilha {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CONTROL_C_CECEDILHA";
+            bindings = <&hm LEFT_CONTROL C>, <&kp PT_C_CEDILLA>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        shift_A_feminine_ordinal: shift_A_feminine_ordinal {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SHIFT_A_FEMININE_ORDINAL";
+            bindings = <&hm LEFT_SHIFT A>, <&kp PT_FEMININE_ORDINAL_INDICATOR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        shift_H_hash: shift_H_hash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SHIFT_H_HASH";
+            bindings = <&hm RIGHT_SHIFT H>, <&kp HASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        alt_S_dollar: alt_S_dollar {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALT_S_DOLLAR";
+            bindings = <&hm RIGHT_ALT S>, <&kp DOLLAR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        comma_slash: comma_slash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_SLASH";
+            bindings = <&kp PT_COMMA>, <&kp KP_SLASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        layer_2_X_percentage: layer_2_X_percentage {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LAYER_2_X_PERCENTAGE";
+            bindings = <&lt 2 X>, <&kp PERCENT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        B_Ampersand: B_Ampersand {
+            compatible = "zmk,behavior-mod-morph";
+            label = "B_AMPERSAND";
+            bindings = <&kp B>, <&kp AMPERSAND>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        alt_i_pipe: alt_i_pipe {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALT_I_PIPE";
+            bindings = <&hm LEFT_ALT I>, <&kp PIPE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        U_underscore: U_underscore {
+            compatible = "zmk,behavior-mod-morph";
+            label = "U_UNDERSCORE";
+            bindings = <&kp U>, <&kp UNDERSCORE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        comma_slash_backslash: comma_slash_backslash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_SLASH_BACKSLASH";
+            bindings = <&comma_slash>, <&kp PT_BACKSLASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        minus_equal: minus_equal {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MINUS_EQUAL";
+            bindings = <&kp KP_MINUS>, <&kp KP_EQUAL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        plus_asterisk: plus_asterisk {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PLUS_ASTERISK";
+            bindings = <&kp KP_PLUS>, <&kp KP_ASTERISK>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        open_parentesis_less: open_parentesis_less {
+            compatible = "zmk,behavior-mod-morph";
+            label = "OPEN_PARENTESIS_LESS";
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        close_parentesis_greater: close_parentesis_greater {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CLOSE_PARENTESIS_GREATER";
+            bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
@@ -213,6 +329,36 @@
             bindings = <&kp ENTER>;
             key-positions = <3 2>;
         };
+
+        minus_equal {
+            bindings = <&minus_equal>;
+            key-positions = <6 7>;
+        };
+
+        plus_asterisc {
+            bindings = <&plus_asterisk>;
+            key-positions = <26 27>;
+        };
+
+        open_parentesis_less {
+            bindings = <&open_parentesis_less>;
+            key-positions = <7 8>;
+        };
+
+        close_parentesis_greater {
+            bindings = <&close_parentesis_greater>;
+            key-positions = <27 28>;
+        };
+
+        open_bracket_brace {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <8 9>;
+        };
+
+        close_bracket_brace {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <28 29>;
+        };
     };
 
     keymap {
@@ -222,10 +368,10 @@
 
         Engram {
             bindings = <
-&hm GLOBE B         &kp Y               &o_masculine_ordinal  &kp U                        &kp G                            &kp Q                  &kp L            &kp D            &kp W              &kp J
-&shift_cedilha C 0  &hm LEFT_CONTROL I  &hm LEFT_ALT E        &command_A_feminine_ordinal  &comma_equal                     &dot_colon             &command_H_hash  &hm RIGHT_ALT T  &control_S_dollar  &hm RIGHT_SHIFT N
-&lt 1 V             &lt 2 X             &kp Z                 &kp K                        &apost_slash                     &question_exclamation  &kp R            &kp M            &kp F              &kp P
-                                        &hm LEFT_SHIFT TAB    &kp SPACE                    &backspace_delete  &none  &none  &kp ESC                &kp ENTER        &super_shift
+&hm GLOBE B  &kp Y               &o_masculine_ordinal  &kp U                        &kp G                            &kp Q                  &kp L            &kp D            &kp W              &kp J
+&none        &hm LEFT_CONTROL I  &hm LEFT_ALT E        &control_A_feminine_ordinal  &comma_equal                     &dot_colon             &command_H_hash  &hm RIGHT_ALT T  &control_S_dollar  &hm RIGHT_SHIFT N
+&lt 1 V      &lt 2 X             &kp Z                 &kp K                        &apost_slash                     &question_exclamation  &kp R            &kp M            &kp F              &kp P
+                                 &hm LEFT_SHIFT TAB    &kp SPACE                    &backspace_delete  &none  &none  &kp ESC                &kp ENTER        &super_shift
             >;
         };
 
@@ -251,8 +397,17 @@
             bindings = <
 &kp Q  &kp W               &kp E           &kp R               &kp T                   &kp Y   &kp U                &kp I            &kp O                &kp P
 &kp A  &hm LEFT_CONTROL S  &hm LEFT_ALT D  &hm LEFT_COMMAND F  &kp G                   &kp H   &hm RIGHT_COMMAND J  &hm RIGHT_ALT K  &hm RIGHT_CONTROL L  &none
-&kp Z  &kp X               &cedilha        &kp V               &kp B                   &kp N   &kp M                &comma_equal     &dot_colon           &question_exclamation
+&kp Z  &kp X               &cecedilha      &kp V               &kp B                   &kp N   &kp M                &comma_equal     &dot_colon           &question_exclamation
                            &trans          &trans              &trans  &trans  &trans  &trans  &trans               &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&B_Ampersand          &kp Y                  &o_masculine_ordinal  &U_underscore              &kp Z                                 &kp G                  &kp L          &kp D                &kp W          &kp Q
+&control_C_cecedilha  &alt_i_pipe            &hm LEFT_COMMAND E    &shift_A_feminine_ordinal  &comma_slash_backslash                &dot_colon             &shift_H_hash  &hm RIGHT_COMMAND T  &alt_S_dollar  &hm RIGHT_CONTROL N
+&lt 1 V               &layer_2_X_percentage  &kp J                 &kp K                      &kp APOS                              &question_exclamation  &kp R          &kp M                &kp F          &kp P
+                                             &hm LEFT_SHIFT TAB    &kp SPACE                  &backspace_delete       &none  &none  &kp ESC                &kp ENTER      &super_shift
             >;
         };
     };
