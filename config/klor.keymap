@@ -405,10 +405,10 @@
 
         New_Num_Nav {
             bindings = <
-&kp KP_DIVIDE                 &kp KP_MULTIPLY           &kp KP_MINUS                  &kp KP_PLUS                 &kp KP_EQUAL                     &trans           &trans                       &trans                         &trans                     &trans
-&hm LEFT_CONTROL KP_NUMBER_0  &hm LEFT_ALT KP_NUMBER_1  &hm LEFT_COMMAND KP_NUMBER_2  &hm LEFT_SHIFT KP_NUMBER_3  &kp KP_NUMBER_4                  &kp KP_NUMBER_5  &hm RIGHT_SHIFT KP_NUMBER_6  &hm RIGHT_COMMAND KP_NUMBER_7  &hm RIGHT_ALT KP_NUMBER_8  &hm RIGHT_CONTROL KP_NUMBER_9
-&kp KP_NUMBER_5               &kp KP_NUMBER_6           &kp KP_NUMBER_7               &kp KP_NUMBER_8             &kp KP_NUMBER_9                  &mkp LCLK        &kp LEFT_ARROW               &kp DOWN                       &kp UP                     &kp RIGHT
-                                                        &trans                        &trans                      &trans           &trans  &trans  &trans           &trans                       &trans
+&kp KP_DIVIDE                 &kp KP_MULTIPLY           &kp KP_MINUS                  &kp KP_PLUS                 &kp KP_EQUAL                     &mkp RCLK  &trans          &trans    &trans  &trans
+&hm LEFT_CONTROL KP_NUMBER_0  &hm LEFT_ALT KP_NUMBER_1  &hm LEFT_COMMAND KP_NUMBER_2  &hm LEFT_SHIFT KP_NUMBER_3  &kp KP_NUMBER_4                  &mkp LCLK  &kp LEFT_ARROW  &kp DOWN  &kp UP  &kp RIGHT
+&kp KP_NUMBER_5               &kp KP_NUMBER_6           &kp KP_NUMBER_7               &kp KP_NUMBER_8             &kp KP_NUMBER_9                  &mkp MCLK  &trans          &trans    &trans  &trans
+                                                        &trans                        &trans                      &trans           &trans  &trans  &trans     &trans          &trans
             >;
         };
 
