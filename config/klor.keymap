@@ -341,11 +341,6 @@
             key-positions = <31 3>;
         };
 
-        to_qwerty {
-            bindings = <&to 4>;
-            key-positions = <31 24>;
-        };
-
         to_engram {
             bindings = <&to 0>;
             key-positions = <31 23>;
@@ -353,12 +348,17 @@
 
         to_num {
             bindings = <&to 2>;
-            key-positions = <31 21>;
+            key-positions = <31 22>;
         };
 
         to_nav {
             bindings = <&to 3>;
-            key-positions = <31 22>;
+            key-positions = <31 21>;
+        };
+
+        to_QWERTY {
+            bindings = <&to 4>;
+            key-positions = <31 20>;
         };
     };
 
