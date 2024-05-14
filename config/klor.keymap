@@ -299,7 +299,7 @@
 
         Esc_one_handed {
             bindings = <&kp ESC>;
-            key-positions = <0 31>;
+            key-positions = <0 1>;
             require-prior-idle-ms = <150>;
         };
 
@@ -317,47 +317,52 @@
 
         enter_one_handed {
             bindings = <&kp ENTER>;
-            key-positions = <14 31>;
+            key-positions = <14 13>;
             require-prior-idle-ms = <150>;
-        };
-
-        command_Q {
-            bindings = <&kp LG(Q)>;
-            key-positions = <1 31>;
-        };
-
-        command_W {
-            bindings = <&kp LG(W)>;
-            key-positions = <2 31>;
-        };
-
-        command_N {
-            bindings = <&kp LG(N)>;
-            key-positions = <31 4>;
-        };
-
-        command_T {
-            bindings = <&command_T_shift_same>;
-            key-positions = <31 3>;
         };
 
         to_engram {
             bindings = <&to 0>;
-            key-positions = <31 23>;
+            key-positions = <31 3>;
         };
 
         to_num {
             bindings = <&to 2>;
-            key-positions = <31 22>;
+            key-positions = <31 2>;
         };
 
         to_nav {
             bindings = <&to 3>;
-            key-positions = <31 21>;
+            key-positions = <31 1>;
         };
 
         to_QWERTY {
             bindings = <&to 4>;
+            key-positions = <31 0>;
+        };
+
+        command_Q {
+            bindings = <&kp LG(Q)>;
+            key-positions = <31 24>;
+        };
+
+        command_W {
+            bindings = <&kp LG(W)>;
+            key-positions = <31 23>;
+        };
+
+        command_T {
+            bindings = <&kp LG(T)>;
+            key-positions = <31 22>;
+        };
+
+        command_N {
+            bindings = <&kp LG(N)>;
+            key-positions = <31 21>;
+        };
+
+        command_R {
+            bindings = <&kp LG(R)>;
             key-positions = <31 20>;
         };
     };
