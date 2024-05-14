@@ -367,7 +367,7 @@
         };
 
         to_qwerty {
-            bindings = <&to 4>;
+            bindings = <&to 5>;
             key-positions = <31 14>;
         };
 
@@ -377,12 +377,12 @@
         };
 
         to_num {
-            bindings = <&to 1>;
+            bindings = <&to 2>;
             key-positions = <31 12>;
         };
 
         to_nav {
-            bindings = <&to 2>;
+            bindings = <&to 4>;
             key-positions = <31 13>;
         };
     };
@@ -395,9 +395,18 @@
         Engram {
             bindings = <
 &B_Ampersand                       &kp Y          &o_masculine_ordinal  &U_underscore                &kp Z                                 &kp G                  &kp L            &kp D                &kp W          &kp Q
-&mommentary_accents_C_Cedilha 3 0  &alt_i_pipe    &hm LEFT_COMMAND E    &control_A_feminine_ordinal  &comma_slash_backslash                &dot_colon             &control_H_hash  &hm RIGHT_COMMAND T  &alt_S_dollar  &kp N
+&mommentary_accents_C_Cedilha 1 0  &alt_i_pipe    &hm LEFT_COMMAND E    &control_A_feminine_ordinal  &comma_slash_backslash                &dot_colon             &control_H_hash  &hm RIGHT_COMMAND T  &alt_S_dollar  &kp N
 &kp V                              &X_percentage  &kp J                 &kp K                        &kp APOS                              &question_exclamation  &kp R            &kp M                &kp F          &kp P
-                                                  &hm LEFT_SHIFT TAB    &lt 2 SPACE                  &backspace_delete       &none  &none  &kp ESC                &kp ENTER        &super_shift
+                                                  &hm LEFT_SHIFT TAB    &lt 4 SPACE                  &backspace_delete       &none  &none  &kp ESC                &kp ENTER        &super_shift
+            >;
+        };
+
+        Accents {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                  &trans  &trans        &trans     &trans        &trans
+&trans  &trans  &trans  &trans  &trans                  &trans  &kp PT_ACUTE  &kp TILDE  &kp PT_CARET  &kp PT_GRAVE
+&trans  &trans  &trans  &trans  &trans                  &trans  &trans        &trans     &trans        &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans
             >;
         };
 
@@ -412,19 +421,10 @@
 
         Nav_Mouse_Scroll {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                  &trans  &mkp LCLK       &mkp RCLK  &mkp MCLK  &trans
-&trans  &trans  &trans  &trans  &trans                  &trans  &kp LEFT_ARROW  &kp DOWN   &kp UP     &kp RIGHT
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans          &trans     &trans     &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans
-            >;
-        };
-
-        Accents {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans        &trans     &trans        &trans
-&trans  &trans  &trans  &trans  &trans                  &trans  &kp PT_ACUTE  &kp TILDE  &kp PT_CARET  &kp PT_GRAVE
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans        &trans     &trans        &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans
+&trans  &trans  &trans  &trans  &trans                  &mkp RCLK  &mkp LCLK       &mkp RCLK      &mkp MCLK    &trans
+&trans  &trans  &trans  &trans  &trans                  &mkp LCLK  &kp LEFT_ARROW  &kp DOWN       &kp UP       &kp RIGHT
+&trans  &trans  &trans  &trans  &trans                  &mkp MCLK  &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP  &kp END
+                &trans  &trans  &trans  &trans  &trans  &trans     &trans          &trans
             >;
         };
 
