@@ -287,21 +287,25 @@
         to_engram {
             bindings = <&to 0>;
             key-positions = <3 34>;
+            layers = <1 2 3 4>;
         };
 
         to_num {
             bindings = <&to 2>;
             key-positions = <2 34>;
+            layers = <0 3 4>;
         };
 
         to_nav {
             bindings = <&to 3>;
             key-positions = <1 34>;
+            layers = <0 2 1 4>;
         };
 
         to_QWERTY {
             bindings = <&to 4>;
             key-positions = <0 34>;
+            layers = <0 1 2 3>;
         };
 
         command_Q {
