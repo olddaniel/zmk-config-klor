@@ -286,47 +286,47 @@
 
         to_engram {
             bindings = <&to 0>;
-            key-positions = <31 3>;
+            key-positions = <3 34>;
         };
 
         to_num {
             bindings = <&to 2>;
-            key-positions = <31 2>;
+            key-positions = <2 34>;
         };
 
         to_nav {
             bindings = <&to 3>;
-            key-positions = <31 1>;
+            key-positions = <1 34>;
         };
 
         to_QWERTY {
             bindings = <&to 4>;
-            key-positions = <31 0>;
+            key-positions = <0 34>;
         };
 
         command_Q {
             bindings = <&kp LG(Q)>;
-            key-positions = <31 24>;
+            key-positions = <24 34>;
         };
 
         command_W {
             bindings = <&kp LG(W)>;
-            key-positions = <31 23>;
+            key-positions = <23 34>;
         };
 
         command_T {
             bindings = <&kp LG(T)>;
-            key-positions = <31 22>;
+            key-positions = <22 34>;
         };
 
         command_N {
             bindings = <&kp LG(N)>;
-            key-positions = <31 21>;
+            key-positions = <21 34>;
         };
 
         command_R {
             bindings = <&kp LG(R)>;
-            key-positions = <31 20>;
+            key-positions = <20 34>;
         };
     };
 
