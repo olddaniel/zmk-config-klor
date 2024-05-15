@@ -269,6 +269,7 @@
         semicolon {
             bindings = <&kp SEMICOLON>;
             key-positions = <15 14>;
+            layers = <0>;
         };
 
         at_sign {
