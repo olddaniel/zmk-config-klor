@@ -342,9 +342,9 @@
 
         Engram {
             bindings = <
-&B_Ampersand            &kp Y          &o_masculine_ordinal  &U_underscore                &kp Z                                 &kp G                  &kp L            &kp D                &kp W          &kp Q
+&B_Ampersand            &kp Y          &o_masculine_ordinal  &U_underscore                &kp Z                                 &kp J                  &kp L            &kp D                &kp W          &kp Q
 &accents_C_Cedilha 1 0  &alt_i_pipe    &hm LEFT_COMMAND E    &control_A_feminine_ordinal  &comma_slash_backslash                &dot_colon             &control_H_hash  &hm RIGHT_COMMAND T  &alt_S_dollar  &kp N
-&kp V                   &X_percentage  &kp J                 &kp K                        &kp APOS                &none  &none  &question_exclamation  &kp R            &kp M                &kp F          &kp P
+&kp V                   &X_percentage  &kp G                 &kp K                        &kp APOS                &none  &none  &question_exclamation  &kp R            &kp M                &kp F          &kp P
                                        &super_shift          &lt 3 TAB                    &backspace_delete                     &kp ENTER              &kp SPACE        &kp ESC
             >;
         };
